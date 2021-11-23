@@ -34,7 +34,9 @@ jobs:
           echo chmod 
           chmod +x func
           echo add path
+          echo "$PATH"
           echo "`pwd`" >> $GITHUB_PATH
+          echo "$PATH"
           echo pwd
           pwd
           echo ls
