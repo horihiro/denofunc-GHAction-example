@@ -34,9 +34,9 @@ jobs:
           echo pwd
           pwd
           echo ls
-          ls
+          ls -l
           echo which func
-          which func
+          PATH=.:$PATH which func
           echo chmod 
           chmod +x func
           echo denofunc
