@@ -24,21 +24,13 @@ jobs:
         uses: azure/login@v1
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
-      
+
+      - name: Add path
+        run: echo "`pwd`" >> $GITHUB_PATH
       - name: Build custom handler
         run: |
-          echo pwd
-          pwd
-          echo pushd
-          pushd ${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}
           echo chmod 
           chmod +x func
-          echo add path
-          echo "`pwd`" >> $GITHUB_PATH
-          echo env
-          env
-          echo pwd
-          pwd
           echo ls
           ls -l
           echo denofunc
