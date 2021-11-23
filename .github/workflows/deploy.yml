@@ -27,10 +27,14 @@ jobs:
       
       - name: Build custom handler
         run: |
-          echo which func
-          which func
+          echo pwd
+          pwd
           echo pushd
           pushd ${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}
+          echo pwd
+          pwd
+          echo ls
+          ls
           echo which func
           which func
           echo chmod 
