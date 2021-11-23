@@ -29,13 +29,8 @@ jobs:
         run: echo "`pwd`" >> $GITHUB_PATH
       - name: Build custom handler
         run: |
-          echo chmod 
           chmod +x func
-          echo ls
-          ls -l
-          echo denofunc
           denofunc publish ${{ env.AZURE_FUNCTIONAPP_NAME }}
-          popd
       - name: 'Run Azure Functions Action'
         uses: Azure/functions-action@v1
         id: fa
