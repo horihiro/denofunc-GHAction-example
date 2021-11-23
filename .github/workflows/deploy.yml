@@ -31,6 +31,8 @@ jobs:
           pwd
           echo pushd
           pushd ${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}
+          echo chmod 
+          chmod +x func
           echo add path
           echo `pwd` >> $GITHUB_PATH
           echo pwd
@@ -39,8 +41,6 @@ jobs:
           ls -l
           echo which func
           which func
-          echo chmod 
-          chmod +x func
           echo denofunc
           denofunc publish ${{ env.AZURE_FUNCTIONAPP_NAME }}
           popd
