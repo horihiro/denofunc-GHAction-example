@@ -27,7 +27,7 @@ jobs:
       
       - name: Build custom handler
         run: |
-          chmod +x func && export PATH=.:$PATH denofunc publish ${{ env.AZURE_FUNCTIONAPP_NAME }}
+          chmod +x func && PATH=.:$PATH denofunc publish ${{ env.AZURE_FUNCTIONAPP_NAME }}
 
       - name: 'Run Azure Functions Action'
         uses: Azure/functions-action@v1
